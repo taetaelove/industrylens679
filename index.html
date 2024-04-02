@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry Lens</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>INDUSTRY LENS</h1>
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" onclick="playClickSound()">Home</a></li>
+                    <li><a href="bangladesh.html" onclick="playClickSound()">Bangladesh</a></li>
+                    <li><a href="uganda.html" onclick="playClickSound()">Uganda</a></li>
+                    <li><a href="contact.html" onclick="playClickSound()">Contact</a></li>
+                </ul>
+            </nav>
+            
+
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2>Welcome to Industry Lens!</h2>
+        </section>
+
+        <section>
+            <p style="text-align: center;">Greetings and Welcome to Industry Lens, your portal to the vibrant and varied economies of Bangladesh and Uganda. Delve into the heart of these nations' major industries, from Uganda’s robust agriculture sector, driving employment and export earnings, to Bangladesh's dynamic manufacturing industry, encompassing textiles, jute, and more. Explore how these industries, along with others such as services, information technology, and energy, shape the economic landscapes and drive innovation and growth. Join us on a journey to discover the stories and intricacies behind these vital sectors, and gain a deeper understanding of the economic forces driving these nations forward.</p>
+        </section>
+        
+
+        <section class="carousel-container">
+            <div class="carousel-slide">
+                <img src="images/image1.jpg" alt="textile" class="carousel-image">
+                <img src="images/image2.jpg" alt="jute" class="carousel-image">
+                <img src="images/image3.jpg" alt="boat" class="carousel-image"> 
+                <img src="images/image4.jpg" alt="giraffe" class="carousel-image">  
+                <img src="images/image5.jpg" alt="kob" class="carousel-image">               
+            </div>
+        </section>
+
+
+        <section class="explore-section">
+            <h2 class="explore-title">Explore Uganda and Bangladesh</h2>
+        <div class="maps-container">
+            <div class="map-box">
+                <h3 class="map-label">Uganda</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10105314.492985193!2d29.99213998342269!3d1.3733330110973406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x176b609e12d8679d%3A0xb1569a595978f80d!2sUganda!5e0!3m2!1sen!2sus!4v1648538560938!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="map-box">
+                <h3 class="map-label">Bangladesh</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7296635.197070217!2d89.03178274242127!3d24.320578178883937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755f142255d76c3%3A0xecdef04a3e19d07d!2sBangladesh!5e0!3m2!1sen!2sus!4v1648538619627!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        </section>
+        <section class="news-feed">
+            <h2>Latest News</h2>
+            <ul id="news-list"></ul>
+        </section>
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Industry Lens</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+    <script>
+    // Array of news items
+    const newsItems = [
+        { title: "New Industrial Park in Tororo", date: "March 30, 2024" },
+        { title: "Uganda Shows Improvement on SDG Performance", date: "March 29, 2024" },
+        { title: "Launch of New Agriculture Initiative", date: "March 28, 2024" }
+    ];
+
+    // Function to populate the news feed
+    function populateNewsFeed() {
+        const newsList = document.getElementById('news-list');
+        newsItems.forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${item.title}</strong> - ${item.date}`;
+            newsList.appendChild(li);
+        });
+    }
+
+    // Call the function to populate the news feed
+    populateNewsFeed();
+
+    // Function to play the click sound
+    function playClickSound() {
+    const clickSound = new Audio('clickaudio.mp3'); 
+    clickSound.play();
+}
+</script>
+
+
+
+</body>
+</html>
